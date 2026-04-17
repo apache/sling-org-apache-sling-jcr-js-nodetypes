@@ -37,13 +37,10 @@ import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Properties;
-import org.apache.felix.scr.annotations.Property;
-import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
+import org.osgi.service.component.annotations.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -78,14 +75,12 @@ import org.slf4j.LoggerFactory;
  * 
  */
 
-@Component
-@Service(Servlet.class)
-@Properties({ @Property(name = "service.description", value = "Download Servlet for binary properties"),
-		@Property(name = "service.vendor", value = "Sandro Boehme"),
-		@Property(name = "sling.servlet.selectors", value = "default_binary_value"),
-		@Property(name = "sling.servlet.extensions", value = "bin"),
-		@Property(name = "sling.servlet.resourceTypes", value = "sling/servlet/default")
-
+@Component(service = Servlet.class, property = {
+		"service.description=Download Servlet for binary properties",
+		"service.vendor=Sandro Boehme",
+		"sling.servlet.selectors=default_binary_value",
+		"sling.servlet.extensions=bin",
+		"sling.servlet.resourceTypes=sling/servlet/default"
 })
 public class DownloadDefaultBinaryValueServlet extends SlingSafeMethodsServlet {
 

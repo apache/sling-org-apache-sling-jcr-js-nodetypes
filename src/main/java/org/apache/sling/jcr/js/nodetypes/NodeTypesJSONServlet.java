@@ -29,16 +29,13 @@ import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.felix.scr.annotations.Component;
-import org.apache.felix.scr.annotations.Properties;
-import org.apache.felix.scr.annotations.Property;
-import org.apache.felix.scr.annotations.Service;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
 import org.apache.sling.commons.json.JSONException;
 import org.apache.sling.commons.json.JSONObject;
+import org.osgi.service.component.annotations.Component;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,13 +46,11 @@ import org.slf4j.LoggerFactory;
  *  
  * The URL is <code>/libs/jsnodetypes/content/nodetypes.json</code>.
  */
-@Component
-@Service(Servlet.class)
-@Properties({ @Property(name = "service.description", value = "Returns the node types as a JSON file"),
-		@Property(name = "service.vendor", value = "Sandro Boehme"),
-		@Property(name = "sling.servlet.extensions", value = "json"),
-		@Property(name = "sling.servlet.resourceTypes", value = "jsnodetypes")
-
+@Component(service = Servlet.class, property = {
+		"service.description=Returns the node types as a JSON file",
+		"service.vendor=Sandro Boehme",
+		"sling.servlet.extensions=json",
+		"sling.servlet.resourceTypes=jsnodetypes"
 })
 public class NodeTypesJSONServlet extends SlingSafeMethodsServlet {
 	/*

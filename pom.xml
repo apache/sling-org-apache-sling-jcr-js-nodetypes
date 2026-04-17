@@ -16,7 +16,7 @@
 	<parent>
 		<groupId>org.apache.sling</groupId>
 		<artifactId>sling</artifactId>
-		<version>30</version>
+		<version>31</version>
 		<relativePath/>
 	</parent>
 
@@ -81,10 +81,6 @@
 						<Provide-Capability>${project.artifactId}; version:Version=0.1.0</Provide-Capability>
 					</instructions>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-scr-plugin</artifactId>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.sling</groupId>
@@ -162,11 +158,6 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.felix</groupId>
-			<artifactId>org.apache.felix.scr.annotations</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<!-- Testing -->
