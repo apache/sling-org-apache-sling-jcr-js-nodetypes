@@ -16,7 +16,7 @@
 	<parent>
 		<groupId>org.apache.sling</groupId>
 		<artifactId>sling-bundle-parent</artifactId>
-		<version>49</version>
+		<version>51</version>
 		<relativePath/>
 	</parent>
 
@@ -140,12 +140,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.osgi</groupId>
-			<artifactId>osgi.core</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>osgi.cmpn</artifactId>
+			<artifactId>org.osgi.service.component.annotations</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
