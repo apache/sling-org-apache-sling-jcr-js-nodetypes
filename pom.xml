@@ -15,19 +15,22 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.apache.sling</groupId>
-		<artifactId>sling</artifactId>
-		<version>34</version>
+		<artifactId>sling-bundle-parent</artifactId>
+		<version>35</version>
 		<relativePath/>
 	</parent>
 
 	<artifactId>org.apache.sling.jcr.js.nodetypes</artifactId>
-	<packaging>bundle</packaging>
 	<version>0.1.0-SNAPSHOT</version>
 
 	<name>Apache Sling JCR JS NodeTypes</name>
 	<description>
 	Uses Apache Sling to generate a JavaScript representation of JCR node types.
     </description>
+
+	<properties>
+		<bnd.baseline.skip>true</bnd.baseline.skip>
+	</properties>
 
 	<licenses>
 		<license>
@@ -71,20 +74,8 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<extensions>true</extensions>
-				<configuration>
-					<instructions>
-						<Sling-Initial-Content>SLING-INF/libs/jsnodetypes;overwrite:=true;path:=/libs/jsnodetypes;uninstall:=true,SLING-INF/libs/jsnodetypes/documentation;overwrite:=true;path:=/libs/jsnodetypes/documentation;ignoreImportProviders:=json;uninstall:=true,SLING-INF/libs/jsnodetypes/js;overwrite:=true;path:=/libs/jsnodetypes/js;ignoreImportProviders:=json;uninstall:=true</Sling-Initial-Content>
-						<Export-Package>org.apache.sling.jcr.js.nodetypes.javascript</Export-Package>
-						<Provide-Capability>${project.artifactId}; version:Version=0.1.0</Provide-Capability>
-					</instructions>
-				</configuration>
-			</plugin>
-			<plugin>
 				<groupId>org.apache.sling</groupId>
-				<artifactId>maven-sling-plugin</artifactId>
+				<artifactId>sling-maven-plugin</artifactId>
 				<executions>
 					<execution>
 						<id>validate-bundle</id>
