@@ -16,7 +16,7 @@
 	<parent>
 		<groupId>org.apache.sling</groupId>
 		<artifactId>sling-bundle-parent</artifactId>
-		<version>43</version>
+		<version>44</version>
 		<relativePath/>
 	</parent>
 
@@ -30,6 +30,7 @@
 
 	<properties>
 		<bnd.baseline.skip>true</bnd.baseline.skip>
+		<project.build.outputTimestamp>1</project.build.outputTimestamp>
 	</properties>
 
 	<licenses>
