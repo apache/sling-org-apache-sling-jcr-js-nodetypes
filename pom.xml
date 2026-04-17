@@ -16,7 +16,7 @@
 	<parent>
 		<groupId>org.apache.sling</groupId>
 		<artifactId>sling</artifactId>
-		<version>23</version>
+		<version>24</version>
 		<relativePath/>
 	</parent>
 
@@ -28,10 +28,6 @@
 	<description>
 	Uses Apache Sling to generate a JavaScript representation of JCR node types.
     </description>
-
-	<properties>
-		<rat.skip>true</rat.skip>
-	</properties>
 
 	<licenses>
 		<license>
