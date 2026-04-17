@@ -18,7 +18,7 @@
  */
 package org.apache.sling.jcr.js.nodetypes.downloaddefaultbinary;
 
-import static org.mockito.Matchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;

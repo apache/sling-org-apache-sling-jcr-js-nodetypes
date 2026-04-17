@@ -20,7 +20,7 @@ package org.apache.sling.jcr.js.nodetypes.mock;
 
 import static org.apache.sling.jcr.js.nodetypes.GenerationConstants.NODETYPE_REQ_PRIMARY_TYPE_NAME1;
 import static org.apache.sling.jcr.js.nodetypes.GenerationConstants.NODETYPE_REQ_PRIMARY_TYPE_NAME2;
-import static org.mockito.Matchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
